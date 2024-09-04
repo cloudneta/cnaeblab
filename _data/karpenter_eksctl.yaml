@@ -47,7 +47,6 @@ iam:
     wellKnownPolicies:
       efsCSIController: true
   ######
-  
   - metadata:
       name: karpenter
       namespace: karpenter
