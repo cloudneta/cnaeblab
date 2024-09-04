@@ -9,6 +9,7 @@ metadata:
   tags:
     karpenter.sh/discovery: ${CLUSTER_NAME}
 
+### Create Addons ###
 addons:
 - name: vpc-cni
   version: latest
@@ -24,10 +25,12 @@ addons:
 - name: aws-efs-csi-driver
   wellKnownPolicies:
     efsCSIController: true
+######
 
 iam:
   withOIDC: true
   serviceAccounts:
+  ### Added ServiceAccount ###
   - metadata:
       name: aws-load-balancer-controller
       namespace: kube-system
@@ -43,6 +46,8 @@ iam:
       namespace: kube-system
     wellKnownPolicies:
       efsCSIController: true
+  ######
+  
   - metadata:
       name: karpenter
       namespace: karpenter
