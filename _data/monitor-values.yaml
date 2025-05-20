@@ -1,5 +1,8 @@
 prometheus:
   prometheusSpec:
+    maximumStartupDurationSeconds: 600
+    scrapeInterval: "15s"
+    evaluationInterval: "15s"
     podMonitorSelectorNilUsesHelmValues: false
     serviceMonitorSelectorNilUsesHelmValues: false
     retention: 5d
