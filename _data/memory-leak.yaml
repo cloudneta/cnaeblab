@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: memory-leak-deployment
+  name: memory-leak
   labels:
     app: memory-leak
 spec:
